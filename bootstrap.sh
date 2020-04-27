@@ -25,7 +25,7 @@
 # 
 # -- License of use: --
 #
-# Copyright Klaus Zimmermann 2017 - all rights reserved.
+# Copyright Pinguim Investidor 2020 - all rights reserved.
 #
 #     This program is free software: you can redistribute it and/or modify
 #     it under the terms of the GNU General Public License as published by
@@ -60,8 +60,8 @@ then
     fi
     
     echo " *** Installation begins ***"
-    #echo "Updating repositories..."
-    #apt-get update &> /dev/null
+    echo "Updating repositories..."
+    apt-get update > /dev/null
 
     echo "======="
     echo "Installing packages..."
@@ -72,14 +72,14 @@ then
         gnumeric \
         vim-gtk \
         feh \
+        mocp \
+        awesome \
         htop \
         g++ \
         mc \
         mpv \
         mutt \
-        identicurse \
         irssi \
-        audacious \
         conky \
         sqlite3 \
         sudo \
@@ -91,9 +91,12 @@ then
         privoxy \
         mcabber \
         viewnior \
+        zenity \
+        yad \
         xsel \
         gajim \
         xterm \
+        python-pip\
         virtualenv \
         openvpn \
         gimp
@@ -107,9 +110,6 @@ else
     echo "*** Updating dotfiles ***"
 
 fi
-
-echo "Copying muttrc..."
-cp muttrc $HOME/.muttrc
 
 echo "Copying tmux configuration files..."
 cp tmux.conf $HOME/.tmux.conf
