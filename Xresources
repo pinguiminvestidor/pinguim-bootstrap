@@ -1,0 +1,39 @@
+! XTerm configurations by the vman.
+! These are mostly indicated to turn xterm into a full-fledged 
+! terminal emulator (like gnome-terminal or konsole) only with the 
+! added benefit that it wont consume as much RAM. Awesome.
+! Also highly recommended for those who like multiplexing apps.
+
+*visualBell: false
+XTerm*termName: xterm-256color
+XTerm*metaSendsEscape: true
+
+! - Colors: thanks, archlinux!
+
+XTerm*foreground:     #DBD6DB
+XTerm*background:     #0A0909
+!black
+*color0:     rgb:00/00/00
+*color8:     rgb:26/27/29
+!red
+*color1:     rgb:80/32/32
+*color9:     rgb:9e/18/28
+!green
+*color2:     rgb:5b/76/2f
+*color10:     rgb:89/b8/3f
+!brown/yellow
+*color3:     rgb:aa/99/43
+*coror11:     rgb:c4/a0/00
+!blue
+*color4:     rgb:32/4c/80
+*color12:     rgb:20/4a/87
+!magenta
+*color5:     rgb:ce/5c/00
+*color13:     rgb:f5/79/00
+!cyan
+*color6:     rgb:51/7d/8a
+*color14:     rgb:46/a4/ff
+
+!white
+*color7:     rgb:aa/aa/99
+*color15:     rgb:bb/bb/aa
