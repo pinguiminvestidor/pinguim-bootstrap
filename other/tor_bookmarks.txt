@@ -14,8 +14,7 @@ Radical Militant Library: http://c3jemx2ube5v5zpg.onion/
 
 Ahmia.fi (Gateway to Tor): http://msydqstlz2kzerdg.onion/
 
-I HERD U LIEK SAERX... Well, there simply are too many instances available in
-Tor out there, and most are too similar to each other for me to recommend you
+# Like searx? There simply are too many instances available in Tor out there, and most are too similar to each other for me to recommend you
 one, so instead I'll simply post this listing here:
 
 https://stats.searx.xyz/tor.html
