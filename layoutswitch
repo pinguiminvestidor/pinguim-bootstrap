@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Quick and easy script to switch between two layouts easily
+# Integrate this with AwesomeWM
+#
+
+current=$(setxkbmap -query | grep "layout" | tr -s " " | cut -d " " -f 2)
+
+if [[ "$current" == "us" ]]
+then
+    setxkbmap br
+    echo "Using pt_BR layout."
+else
+    setxkbmap us
+    echo "Using en_US layout."
+fi
