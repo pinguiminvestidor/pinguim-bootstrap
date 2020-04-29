@@ -301,8 +301,14 @@ globalkeys = gears.table.join(
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
+    -- Change layouts with Mod+z
     awful.key({ modkey,           }, "z", function () awful.spawn("layoutswitch") end,
               {description = "Switch Keyboard Layouts", group = "awesome"}),
+
+    -- Open File manager a-la Windows Mod+e
+    awful.key({ modkey,           }, "e", function () awful.spawn("pcmanfm") end,
+              {description = "Open File Manager", group = "awesome"}),
+
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -582,3 +588,12 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+--[[
+
+    Autostart section as described in the ArchWiki:
+    https://wiki.archlinux.org/index.php/Awesome#Autostart
+
+]]--
+
+awful.spawn.with_shell("~/.config/awesome/awesome_autostart.sh")

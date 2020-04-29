@@ -4,7 +4,7 @@
 # Integrate this with AwesomeWM
 #
 
-current=$(setxkbmap -query | grep "layout" | tr -s " " | cut -d " " -f 2)
+current=$(setxkbmap -query | grep "layout" | awk '{ print $2 }')
 
 if [[ "$current" == "us" ]]
 then
