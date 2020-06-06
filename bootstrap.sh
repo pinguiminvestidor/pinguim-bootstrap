@@ -43,14 +43,14 @@
 
 # Sometimes we just want to update the configuration files to the latest 
 # version available thanks to `git pull'. If that's the case, answer yes here:
-echo "Do you want only to update the configuration files? (y/n)"
+printf "Do you want only to update the configuration files? (y/n) "
 read decision
 
 if [[ "$decision" != "y" ]]
 then
     echo "I'm assuming that you already took the time to configure APT, including"
     echo "it's repositories, URLs, distribution, etc."
-    echo "Shall we proceed? (y/n)"
+    printf "Shall we proceed? (y/n) "
 
     read gonogo
 
@@ -58,10 +58,12 @@ then
         echo "Aborted."
         exit 1
     fi
-    
+    echo "Root is needed to start downloading the packages."
+    echo "You will be prompted to enter your password now, but it's for the sudo command." 
+    echo "If you don't trust the program, you can always check the source code."
     echo " *** Installation begins ***"
     echo "Updating repositories..."
-    apt-get update > /dev/null
+    sudo apt-get update > /dev/null
 
     echo "======="
     echo "Installing packages..."
@@ -72,13 +74,15 @@ then
         gnumeric \
         vim-gtk \
         feh \
-        mocp \
+        moc \
         awesome \
         htop \
         g++ \
         mc \
         mpv \
         mutt \
+        calcurse \
+        redshift \
         irssi \
         conky \
         sqlite3 \
@@ -88,6 +92,8 @@ then
         calibre \
         elinks \
         pcmanfm \
+        audacity \
+        arandr \
         privoxy \
         mcabber \
         viewnior \
@@ -96,7 +102,7 @@ then
         xsel \
         gajim \
         xterm \
-        python-pip\
+        python3-pip\
         virtualenv \
         openvpn \
         gimp
