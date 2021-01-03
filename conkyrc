@@ -1,50 +1,53 @@
-# conky configuration
-#
-# This has become my standard netbook rc btw
-# Originally from Crunchbang linux.
-#
-# Enjoy! :)
+conky.config = {
+-- conky configuration
 
-##############################################
-# Settings
-##############################################
-background yes
-border_inner_margin 15
-use_xft yes
-xftfont Sans:size=12
-xftalpha 1
-update_interval 1.0
-total_run_times 0
-own_window yes
-own_window_transparent yes
-# Set to desktop on GNOME, KDE or Xfce - not LXDE.
-own_window_type desktop
-own_window_argb_visual yes
-own_window_argb_value 100
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-double_buffer yes
-minimum_size 310 400
-maximum_width 310
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders no
-default_color dddddd
-default_shade_color 000000
-default_outline_color 828282
-alignment top_right
-gap_x 17
-gap_y 30
-no_buffers yes
-uppercase no
-cpu_avg_samples 2
-override_utf8_locale no
+-- This has become my standard netbook rc btw
+-- Originally from Crunchbang linux.
 
-##############################################
-#  Output
-##############################################
+-- Enjoy! :)
 
-TEXT
+--#############################################
+-- Settings
+--#############################################
+	background = true,
+	border_inner_margin = 15,
+	use_xft = true,
+	font = 'Sans:size=12',
+	xftalpha = 1,
+	update_interval = 1.0,
+	total_run_times = 0,
+	own_window = true,
+	own_window_transparent = true,
+-- Set to desktop on GNOME, KDE or Xfce - not LXDE.
+	own_window_type = 'desktop',
+	own_window_argb_visual = true,
+	own_window_argb_value = 100,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	double_buffer = true,
+	minimum_width = 310, minimum_height = 400,
+	maximum_width = 310,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	default_color = '#333333',
+	default_shade_color = '#000000',
+	default_outline_color = '#828282',
+	alignment = 'top_right',
+	gap_x = 17,
+	gap_y = 30,
+	no_buffers = true,
+	uppercase = false,
+	cpu_avg_samples = 2,
+	override_utf8_locale = false,
+
+--#############################################
+--  Output
+--#############################################
+
+};
+
+conky.text = [[
 $alignc${font Droid\ Sans:size=20}${time %A, %b %d}
 $font
 $alignc${font Droid\ Sans:size=40}${time %H:%M}
@@ -64,9 +67,9 @@ CONNECTIVITY
 $hr
 WI-FI
 
-IP Address: ${addr wlp2s0}
-Signal: ${wireless_link_bar 8 wlp2s0}
-Down: ${downspeed wlp2s0} Up: ${upspeed wlp2s0}
+IP Address: ${addr wlan0}
+Signal: ${wireless_link_bar 8 wlan0}
+Down: ${downspeed wlan0} Up: ${upspeed wlan0}
 ${hr}
 WIRED
 
@@ -76,3 +79,4 @@ Down: ${downspeed enp1s0} Up: ${upspeed enp1s0}
 $hr
 Battery: ${battery BAT1} ${battery_bar 8 BAT1}
 
+]];
