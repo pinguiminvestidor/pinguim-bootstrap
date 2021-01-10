@@ -16,7 +16,6 @@ function run()
 
 run xfce4-power-manager
 run redshift
-run nextcloud
-
-# Where is that binary?
-# run /opt/piavpn/pia-client --quiet
+run nm-applet # yes!
+run xscreensaver
+# run nextcloud

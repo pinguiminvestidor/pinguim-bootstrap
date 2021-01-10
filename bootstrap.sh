@@ -94,7 +94,6 @@ then
         pcmanfm \
         audacity \
         arandr \
-        privoxy \
         mcabber \
         viewnior \
         zenity \
